@@ -2,10 +2,10 @@
 {
     internal enum Inputs
     {
-        InsertMoney,
-        PressRefund,
-        PressTea,
-        PressCoffee,
-        TakeDrink
+        X1, // Оплата
+        X2, // Возврат
+        X3, // Выбор чая
+        X4, // Выбор кофе
+        X5 // Забрать напиток
     }
 }

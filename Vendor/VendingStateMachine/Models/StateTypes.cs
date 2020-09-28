@@ -2,9 +2,9 @@
 {
     internal enum StateTypes
     {
-        Waiting,
-        Payed,
-        MakingTea,
-        MakingCoffe
+        Z1, // Ожидание
+        Z2, // Оплачено
+        Z3, // Приготовление чая
+        Z4 // Приготовление кофе
     }
 }

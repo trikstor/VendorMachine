@@ -16,11 +16,11 @@ namespace Vendor.VendingStateMachine
         }
 
         /// <summary>
-        /// 
+        /// Привязать к модели входы и выходы автомата
         /// </summary>
-        /// <param name="viewModel"></param>
-        /// <param name="input"></param>
-        /// <param name="output"></param>
+        /// <param name="viewModel">Презентационная модель</param>
+        /// <param name="input">Поступает в автомат, если вызвано событие презентационной модели</param>
+        /// <param name="output">Если на выходе автомата это значение, то изменяется состояние презентационной модели</param>
         public void Bind(IViewModel viewModel, Inputs? input, Outputs? output)
         {
             if(output.HasValue)
@@ -32,7 +32,7 @@ namespace Vendor.VendingStateMachine
         private void OnAction(Inputs input)
         {
             var output = stateMachine.Handle(input);
-            if (output != Outputs.None)
+            if (output != Outputs.Y1)
                 viewModelByOutput[output].Switch();
         }
     }

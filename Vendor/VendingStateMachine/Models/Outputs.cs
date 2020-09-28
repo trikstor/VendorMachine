@@ -2,9 +2,9 @@
 {
     internal enum Outputs
     {
-        None,
-        Money,
-        Tea,
-        Coffee
+        Y1, // Ничего
+        Y2, // Деньги
+        Y3, // Чай
+        Y4 // Кофе
     }
 }
