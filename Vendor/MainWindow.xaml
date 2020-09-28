@@ -1,0 +1,38 @@
+﻿<Window x:Class="Vendor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="414">
+    <Grid>
+        <Canvas>
+            <Canvas.Background>
+                <ImageBrush ImageSource="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\MachineBackground.png"/>
+            </Canvas.Background>
+            <Button x:Name="TeaButton" Command="{Binding TeaButton.Command}" Background="Transparent" BorderBrush="Transparent" Canvas.Left="53" Canvas.Top="273">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\TeaButton.png"/>
+            </Button>
+            <Button x:Name="СoffeeButton" Command="{Binding CoffeeButton.Command}" Background="Transparent" BorderBrush="Transparent" Canvas.Left="53" Canvas.Top="217">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\CoffeeButton.png"/>
+            </Button>
+
+            <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\CoinAcceptor.png" AllowDrop="true" Drop="coinAcceptor_Drop" Canvas.Left="310" Canvas.Top="207" Height="80" Width="37"/>
+            <Button x:Name="RefundButton" Command="{Binding RefundButton.Command}" Background="Transparent" BorderBrush="Transparent" Canvas.Left="310" Canvas.Top="283">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\Refund.png" Height="35" Width="33"/>
+            </Button>
+
+            <Button x:Name="CupTea" Visibility="{Binding TeaCup.Visibility}" Command="{Binding TeaCup.Command}" Background="Transparent" BorderBrush="Transparent" Width="100" Height="100" Canvas.Left="140" Canvas.Top="390">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\CupTea.png"/>
+            </Button>
+            <Button x:Name="CupCoffee" Visibility="{Binding CoffeeCup.Visibility}" Command="{Binding CoffeeCup.Command}" Background="Transparent" BorderBrush="Transparent" Width="100" Height="100" Canvas.Left="140" Canvas.Top="390">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\CupCoffee.png"/>
+            </Button>
+            <Image x:Name="CoinForAcceptor" Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\Coin.png" AllowDrop="True" MouseDown="coinImage_MouseDown" Canvas.Left="26" Canvas.Top="546" />
+
+            <Button x:Name="ExtraCoin" Visibility="{Binding ExtraCoin.Visibility}" MouseDoubleClick="ExtraCoin_MouseDoubleClick" Background="Transparent" BorderBrush="Transparent" Canvas.Left="280" Canvas.Top="220">
+                <Image Source="C:\Users\azpk3\source\repos\Vendor\Vendor\bin\Debug\netcoreapp3.1\Resources\Coin.png"/>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>
